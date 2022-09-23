@@ -17,6 +17,11 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
         this.petService = petService;
     }
 
+    public OwnerMapService() {
+        petService = new PetMapService();
+        petTypeService = new PetTypeMapService();
+    }
+
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
