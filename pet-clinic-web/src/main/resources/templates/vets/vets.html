@@ -5,6 +5,41 @@
     <title>List of Vets</title>
 </head>
 <body>
-<h1 th:text="'List of Vets'">List of Vets...</h1>
+<h2>Veterinarians</h2>
+
+<table id="vets" class="table table-striped">
+    <thead>
+    <tr>
+        <th style="width: 150px;">Id</th>
+        <th style="width: 150px;">First Name</th>
+        <th style="width: 150px;">Last Name</th>
+        <!--
+        <th>Name</th>
+        <th>Specialties</th>
+        -->
+    </tr>
+    </thead>
+    <tbody>
+    <!--/*@thymesVar id="vet" type="org.springboot.petclinic.model.Vet"*/-->
+    <!--/*@thymesVar id="vets" type="java.util.Set"*/-->
+    <tr th:each="vet : ${vets}">
+        <!--/*@thymesVar id="id" type="java.lang.Long"*/-->
+        <!--/*@thymesVar id="firstName" type="java.lang.String"*/-->
+        <!--/*@thymesVar id="lastName" type="java.lang.String"*/-->
+        <!--/*@thymesVar id="specialty" type="org.springboot.petclinic.model.Speciality"*/-->
+        <!--/*@thymesVar id="specialities" type="java.util.Set"*/-->
+        <!--/*@thymesVar id="description" type="java.lang.String"*/-->
+        <!--/*@thymesVar id="size" type="java.lang.Integer"*/-->
+        <td th:text="${vet.id}">1</td>
+        <td th:text="${vet.firstName}">Joe</td>
+        <td th:text="${vet.lastName}">Buck</td>
+        <!--
+        <td th:text="${vet.firstName + ' ' + vet.lastName}"></td>
+        <td><span th:each="specialty : ${vet.specialities}"
+                  th:text="${specialty.description + ' '}"/> <span
+                th:if="${vet?.specialities?.size() == 0}">none</span></td>
+        -->
+    </tr>
+    </tbody>
 </body>
 </html>
