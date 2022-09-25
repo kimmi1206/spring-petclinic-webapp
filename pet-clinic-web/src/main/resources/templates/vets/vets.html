@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'vets')}">
 <head>
     <meta charset="UTF-8">
     <title>List of Vets</title>
@@ -19,17 +19,17 @@
         -->
     </tr>
     </thead>
-    <tbody>
     <!--/*@thymesVar id="vet" type="org.springboot.petclinic.model.Vet"*/-->
     <!--/*@thymesVar id="vets" type="java.util.Set"*/-->
+    <!--/*@thymesVar id="id" type="java.lang.Long"*/-->
+    <!--/*@thymesVar id="firstName" type="java.lang.String"*/-->
+    <!--/*@thymesVar id="lastName" type="java.lang.String"*/-->
+    <!--/*@thymesVar id="specialty" type="org.springboot.petclinic.model.Speciality"*/-->
+    <!--/*@thymesVar id="specialities" type="java.util.Set"*/-->
+    <!--/*@thymesVar id="description" type="java.lang.String"*/-->
+    <!--/*@thymesVar id="size" type="java.lang.Integer"*/-->
+    <tbody>
     <tr th:each="vet : ${vets}">
-        <!--/*@thymesVar id="id" type="java.lang.Long"*/-->
-        <!--/*@thymesVar id="firstName" type="java.lang.String"*/-->
-        <!--/*@thymesVar id="lastName" type="java.lang.String"*/-->
-        <!--/*@thymesVar id="specialty" type="org.springboot.petclinic.model.Speciality"*/-->
-        <!--/*@thymesVar id="specialities" type="java.util.Set"*/-->
-        <!--/*@thymesVar id="description" type="java.lang.String"*/-->
-        <!--/*@thymesVar id="size" type="java.lang.Integer"*/-->
         <td th:text="${vet.id}">1</td>
         <td th:text="${vet.firstName}">Joe</td>
         <td th:text="${vet.lastName}">Buck</td>
