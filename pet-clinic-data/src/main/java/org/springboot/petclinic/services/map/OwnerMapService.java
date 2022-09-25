@@ -1,6 +1,7 @@
 package org.springboot.petclinic.services.map;
 
 import org.springboot.petclinic.model.Owner;
+import org.springboot.petclinic.model.Pet;
 import org.springboot.petclinic.services.OwnerService;
 import org.springboot.petclinic.services.PetService;
 import org.springboot.petclinic.services.PetTypeService;
@@ -41,7 +42,6 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 
         if (object != null) {
 
-            /*
             if (object.getPets() != null) {
                 object.getPets().forEach(pet -> {
                     if (pet.getPetType() != null){
@@ -58,7 +58,6 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
                     }
                 });
             }
-            */
 
             return super.save(object);
 
