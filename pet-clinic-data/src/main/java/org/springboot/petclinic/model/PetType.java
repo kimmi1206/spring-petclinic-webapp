@@ -12,7 +12,7 @@ public class PetType extends BaseEntity {
     private String name;
 
     public PetType() {
-        super(1L);
+        super();
         this.name = "";
     }
 

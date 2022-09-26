@@ -15,6 +15,12 @@ public class Person extends BaseEntity {
     public Person() {
     }
 
+    public Person(Long id) {
+        super(id);
+        this.firstName = "";
+        this.lastName = "";
+    }
+
     public Person(Long id, String firstName, String lastName) {
         super(id);
         this.firstName = firstName;

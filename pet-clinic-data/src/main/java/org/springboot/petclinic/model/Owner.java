@@ -20,6 +20,17 @@ public class Owner extends Person {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
+    public Owner() {
+    }
+
+    public Owner(Long id) {
+        super(id);
+        this.address = "";
+        this.city = "";
+        this.telephone = "";
+        this.pets = null;
+    }
+
     public String getAddress() {
         return address;
     }
