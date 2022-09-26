@@ -12,8 +12,6 @@ public class PetType extends BaseEntity {
     private String name;
 
     public PetType() {
-        super();
-        this.name = "";
     }
 
     public PetType(Long id) {
