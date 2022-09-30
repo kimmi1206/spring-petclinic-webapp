@@ -41,7 +41,6 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/kimmi1206/spring-petclinic-webapp.git</developerConnection>
-        <tag>HEAD</tag>
     </scm>
 
 </project>
